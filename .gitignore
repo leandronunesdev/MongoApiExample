@@ -1,0 +1,75 @@
+# Build results
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# Nuget
+*.nupkg
+*.snupkg
+.nuget/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Others
+*.dbmdl
+*.dbproj.schemaview
+*.pdb
+*.cache
+*.pidb
+*.svclog
+*.scc
+
+# Test results
+TestResults/
+*.vspscc
+*.vssscc
+*.vsp
+*.vspx
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+*.psess
+*.vspf
+
+# Azure Pipelines
+.azure-pipelines/
+
+# Local history for Visual Studio
+.localhistory/
+
+# Others
+*.tlog
+*.vsix
+*.docstates
+
+# Dotnet tools manifest
+.dotnet-tools.json
+
+# Secret settings (exemplo)
+secrets.json
+
+# Global config files
+global.json
