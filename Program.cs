@@ -4,7 +4,7 @@ using MongoApiExample.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<MongoDBSettings>(
-    builder.Configuration.GetSection("MongoDB"));
+    builder.Configuration.GetSection("MongoDBSettings"));
 builder.Services.AddSingleton<MongoDBService>();
 
 builder.Services.AddControllers(); // <-- Necessário!

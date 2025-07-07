@@ -11,7 +11,7 @@ namespace MongoApiExample.Services
 
         public MongoDBService(IOptions<MongoDBSettings> mongoDBSettings)
         {
-            MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionURI);
+            MongoClient client = new MongoClient(mongoDBSettings.Value.ConnectionString);
             IMongoDatabase database = client.GetDatabase(mongoDBSettings.Value.DatabaseName);
             _playlistsCollection = database.GetCollection<Playlist>(mongoDBSettings.Value.CollectionName);
         }
@@ -30,7 +30,7 @@ namespace MongoApiExample.Services
         public async Task AddToPlaylistAsync(string id, string movieId)
         {
             FilterDefinition<Playlist> filter = Builders<Playlist>.Filter.Eq("Id", id);
-            UpdateDefinition<Playlist> update = Builders<Playlist>.Update.AddToSet<string>("movieId", movieId);
+            UpdateDefinition<Playlist> update = Builders<Playlist>.Update.AddToSet<string>("items", movieId);
             await _playlistsCollection.UpdateOneAsync(filter, update);
             return;
         }
